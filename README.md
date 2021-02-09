@@ -12,6 +12,6 @@ npm install
 
 npm run serve
 
-##3 build for production
+### build for production
 
 npm run build
