@@ -1,4 +1,4 @@
-@maincolor: rgba(154, 241, 154, 0.897);
+@maincolor: #dff9fb;
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +7,7 @@
 body {
   display: flex;
   justify-content: center;
+  background: #2c3e50;
   main {
     display: flex;
     flex-direction: column;
@@ -15,7 +16,8 @@ body {
     margin-top: 40px;
     width: 360px;
     height: 420px;
-    border: 5px solid #000;
+    border: 5px solid #95afc0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     background-color: @maincolor;
     #stage {
@@ -23,6 +25,16 @@ body {
       width: 304px;
       height: 304px;
       border: 2px solid #aaa;
+      .placeholder {
+        position: absolute;
+        width: 304px;
+        height: 304px;
+        opacity: 0.1;
+        text-align: center;
+        line-height: 304px;
+        font-size: 40px;
+        transform: rotateZ(-45deg);
+      }
       #snake {
         div {
           position: absolute;
@@ -31,7 +43,7 @@ body {
           background-color: #000;
           border: 1px solid @maincolor;
           &:nth-child(1) {
-            background-color: brown;
+            background-color: #05c46b;
           }
         }
       }
@@ -44,8 +56,8 @@ body {
         justify-content: space-between;
         align-items: space-between;
         div {
-          width: 4.5px;
-          height: 4.5px;
+          width: 4.2px;
+          height: 4.2px;
           background-color: red;
         }
       }
@@ -53,7 +65,23 @@ body {
     #score_panel {
       width: 304px;
       display: flex;
+      align-items: center;
       justify-content: space-between;
+      .btn_open {
+        width: 50px;
+        height: 30px;
+        background-color: salmon;
+        border-radius: 3px;
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+        transition: 1s;
+        &:hover {
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        }
+      }
     }
   }
 }

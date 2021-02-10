@@ -1,7 +1,4 @@
-import './styles/index.less'
-
-import GameControl from './modules/GameControl'
-
-
-console.log(new GameControl());
+import './styles/index.less';
+import GameControl from './modules/GameControl';
+new GameControl();
 
